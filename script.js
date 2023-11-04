@@ -30,20 +30,28 @@ fs.readFile('test.json', 'utf-8', (err, data) => {
     console.log("\nHandling getting a JSON file\n");
 
     const jsonData = JSON.parse(data);
+    
     for (const key in jsonData) {
         if (jsonData.hasOwnProperty(key)) {
             const value = jsonData[key];
+            
+            console.log(`- ${key}`);
             if (Array.isArray(value)) {
-                console.log(`- ${key}`);
                 for (const person of value) {
-                    const i = 1;
                     for (const personKey in person) {
                         if (person.hasOwnProperty(personKey)) {
                             console.log(`    ${personKey} : ${person[personKey]}`);
                         }
                     }
                 }
+            } else {
+                for (const personKey in value) {
+                    if (value.hasOwnProperty(personKey)) {
+                        console.log(`    ${personKey} : ${value[personKey]}`);
+                    }
+                }
             }
         }
     }
+    console.log('=======================================');
  });

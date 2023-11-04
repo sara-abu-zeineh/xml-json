@@ -8,5 +8,7 @@
         {"firstName":"John", "lastName":"Doe"},
         {"firstName":"Anna", "lastName":"Smith"},
         {"firstName":"Peter", "lastName":"Jones"}
-      ]
+      ],
+      "JAMAL" : [{"firstName":"Ahmad"}], 
+      "HI":{"ge":"mo"}
 }
